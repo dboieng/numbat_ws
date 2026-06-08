@@ -1,5 +1,5 @@
 # Numbat - A subsidary of Bored Usyd Engineers (BUE)
-This project builds on the extraordinary work of {vertueux](https://github.com/vertueux/smov?tab=readme-ov-file), [mike492](https://github.com/mike4192/spotMicro), and [michaelkubina](https://github.com/michaelkubina/SpotMicroESP32) extending the ESP32 SpotMicro platform to integrate with ROS 2 through a Raspberry Pi 4B. The ultimate goal is to have a functional quadruped robotic platform for Dr Jack Naylor and Dr Micheal Rubin who started and commmissioned the project. 
+This project builds on the extraordinary work of [vertueux](https://github.com/vertueux/smov), [mike492](https://github.com/mike4192/spotMicro), and [michaelkubina](https://github.com/michaelkubina/SpotMicroESP32) extending the ESP32 SpotMicro platform to integrate with ROS 2 through a Raspberry Pi 4B. The ultimate goal is to have a functional quadruped robotic platform for Dr Jack Naylor and Dr Micheal Rubin who started and commmissioned the project. 
 
 This project is in collaboration with the University of Sydney Robotics Club (USRC).
 
