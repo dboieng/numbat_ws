@@ -6,6 +6,8 @@ Reading all the repos I found that every implementation uses the PCA9685 servo d
 
 Below is our current circuit diagram that powers our setup.
 
+![System Architecture](images/system_architecture.png)
+
 ## Documentation
 - PCA9685 [Module Datasheet](https://cdn-learn.adafruit.com/downloads/pdf/16-channel-pwm-servo-driver.pdf)
 - PCA9685 [Driver Datasheet](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf)
