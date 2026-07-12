@@ -1,0 +1,1 @@
+This folder contains all the stl files put together as sliced .3mf files for your convenience. Includes mirrored components. This file set should all the user to build a basic spot micro fraem with no covers or additions  
