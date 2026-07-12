@@ -1,0 +1,44 @@
+smov_config:
+  ros__parameters:
+    use_single_board: true
+    front_board_i2c_bus: 1
+    back_board_i2c_bus: 4
+
+    # channel         → PCA9685 port (0–15)
+    # center          → PWM value at servo midpoint
+    # range           → total PWM movement range
+    # direction       → 1 or -1 (flip movement direction)
+    #
+    # default_start   → INITIAL POSITION at startup (VERY IMPORTANT)
+    #                   -1 = minimum extreme (fully one side)
+    #                    0 = center (neutral pose)
+    #                    1 = maximum extreme (opposite side)
+    #
+    # centered_angle  → physical joint angle (degrees) at center PWM
+    # max_angle       → angle (degrees) at maximum movement
+
+    # Format:
+    # [channel (0 to 15), center, range, direction, default_start, centered_angle, max_angle]
+
+    FRONT_LOWER_LEG_RIGHT:  [0, 310, 395, -1, -1, 110, 190]  # right front knee
+    FRONT_UPPER_LEG_RIGHT:  [1, 190, 200, -1, 0, 55, 170] # right front shoulder
+    FRONT_BODY_RIGHT:       [2, 335, 200,  1, 0, 90, 130  ]  # right front hip
+
+    BACK_LOWER_LEG_RIGHT:   [3, 310, 395, -1, -1, 110, 190]
+    BACK_UPPER_LEG_RIGHT:   [4,  300, 440, -1, 0, 55, 170]
+    BACK_BODY_RIGHT:        [5,  460, 220, -1, 0, 90, 130]  # right back hip
+
+    BACK_LOWER_LEG_LEFT:    [6, 310, 380, 1, -1, 110, 190]
+    BACK_UPPER_LEG_LEFT:    [7,  370, 440,  1, 0, 55, 170]
+    BACK_BODY_LEFT:         [8,  290, 220,  1, 0, 90, 130] # left back hip
+    
+    FRONT_LOWER_LEG_LEFT:   [9, 345, 385, 1, -1, 110, 190] # left front knee
+    FRONT_UPPER_LEG_LEFT:   [10, 260, 200,  1, 0, 55, 170]  # left front shoulder
+    FRONT_BODY_LEFT:        [11, 400, 200, 1, 0, 90, 130] # left front hip
+
+smov_states: # centimeters 
+  ros__parameters:
+    upper_leg_length: 14.0
+    lower_leg_length: 14.0
+    hip_body_distance: 4.0
+    reset_vals_after_state_pkg_ended: true

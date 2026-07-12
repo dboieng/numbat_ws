@@ -1,0 +1,104 @@
+spot_micro_motion_cmd_node:
+  ros__parameters:
+    # Configuration parameters
+
+    # Robot wireframe size parameters
+    # Lengths representing a wireframe model of the robot. All lengths joint to joint.
+    hip_link_length: 0.055
+    upper_leg_link_length: 0.1075
+    lower_leg_link_length: 0.130
+    body_width: 0.078
+    body_length: 0.186
+
+    # Stance parameters
+    default_stand_height: 0.155
+    stand_front_x_offset: 0.015
+    stand_back_x_offset: -0.000
+    lie_down_height: 0.083
+    lie_down_foot_x_offset: 0.065
+
+    # Servo parameters
+    # Servo num/channel values below are PCA9685 ports 1-16.
+    num_servos: 12
+    servo_max_angle_deg: 82.5
+
+    RF_3: {num: 1.0,  center: 200.0, range: 385.0, direction:  1.0, center_angle_deg:  98.66}
+    RF_2: {num: 2.0,  center: 306.0, range: 385.0, direction:  1.0, center_angle_deg: -50.09}
+    RF_1: {num: 3.0,  center: 335.0, range: 396.0, direction: -1.0, center_angle_deg:   0.00}
+
+    RB_3: {num: 4.0,  center: 200.0, range: 394.2, direction:  1.0, center_angle_deg:  99.12}
+    RB_2: {num: 5.0,  center: 435.0, range: 396.0, direction:  1.0, center_angle_deg: -55.90}
+    RB_1: {num: 6.0,  center: 465.0, range: 410.7, direction:  1.0, center_angle_deg:   0.00}
+
+    LB_3: {num: 7.0,  center: 306.0, range: 390.5, direction:  1.0, center_angle_deg: -50.00}
+    LB_2: {num: 8.0,  center: 306.0, range: 392.3, direction:  1.0, center_angle_deg:  26.40}
+    LB_1: {num: 9.0,  center: 306.0, range: 374.0, direction: -1.0, center_angle_deg:   -33.06}
+
+    LF_3: {num: 10.0, center: 306.0, range: 394.2, direction:  1.0, center_angle_deg: -60.66}
+    LF_2: {num: 11.0, center: 306.0, range: 392.3, direction:  1.0, center_angle_deg:  22.09}
+    LF_1: {num: 12.0, center: 306.0, range: 403.3, direction:  1.0, center_angle_deg:   -31.50}
+
+    # Control Parameters
+    transit_tau: 0.3
+    transit_rl: 0.06
+    transit_angle_rl: 0.35
+    max_fwd_velocity: 0.4
+    max_side_velocity: 0.4
+    max_yaw_rate: 0.35
+
+    # Gait parameters
+    z_clearance: 0.050
+    alpha: 0.5
+    beta: 0.5
+    foot_height_time_constant: 0.02
+
+    ##################
+    # GAIT SELECTION #
+    ##################
+
+    ############################################
+    ############## 8 Phase Gait ################
+    ############################################
+    num_phases: 8
+    rb_contact_phases: [1, 0, 1, 1, 1, 1, 1, 1]
+    rf_contact_phases: [1, 1, 1, 0, 1, 1, 1, 1]
+    lf_contact_phases: [1, 1, 1, 1, 1, 1, 1, 0]
+    lb_contact_phases: [1, 1, 1, 1, 1, 0, 1, 1]
+    overlap_time: 0.0
+    swing_time: 0.36
+    body_shift_phases: [1, 2, 3, 4, 5, 6, 7, 8]
+    fwd_body_balance_shift: 0.035
+    back_body_balance_shift: 0.005
+    side_body_balance_shift: 0.015
+
+    #################################################
+    ############## 4 Phase Trot Gait ################
+    #################################################
+    # num_phases: 4
+    # rb_contact_phases: [1, 0, 1, 1]
+    # rf_contact_phases: [1, 1, 1, 0]
+    # lf_contact_phases: [1, 0, 1, 1]
+    # lb_contact_phases: [1, 1, 1, 0]
+    # overlap_time: 0.18
+    # swing_time: 0.18
+    # body_shift_phases: [0, 0, 0, 0]
+    # fwd_body_balance_shift: 0.0
+    # back_body_balance_shift: 0.0
+    # side_body_balance_shift: 0.0
+
+    # TF parameters
+    lidar_x_pos: 0.045
+    lidar_y_pos: 0.0
+    lidar_z_pos: 0.085
+    lidar_yaw_angle: 180.0
+
+    # Node parameters
+    dt: 0.02
+    publish_odom: true
+
+    # Debug mode
+    debug_mode: false
+    plot_mode: false
+
+    # Standalone mode
+    run_standalone: false

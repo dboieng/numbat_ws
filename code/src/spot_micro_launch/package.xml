@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>spot_micro_launch</name>
+  <version>0.0.0</version>
+  <description>The spot_micro_launch package</description>
+  <maintainer email="mike@todo.todo">mike</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>spot_micro_motion_cmd</exec_depend>
+  <exec_depend>spot_micro_keyboard_command</exec_depend>
+  <exec_depend>spot_micro_rviz</exec_depend>
+  <exec_depend>rplidar_ros</exec_depend>
+  <exec_depend>hector_mapping</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
