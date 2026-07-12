@@ -1,4 +1,4 @@
-﻿# Parts
+﻿# CAD
 This section gices an overview of all necessary parts and their compatibility to the original KDY0523-Spotmicro. For the assembly please read the [Assembly Guide](https://github.com/michaelkubina/SpotMicroESP32/blob/master/assembly/). You will need at least the screws and nuts from the [Bill of Materials](https://github.com/michaelkubina/SpotMicroESP32/#bill-of-material).
 
 ## Mods
